@@ -118,20 +118,20 @@ original_array=[ 0, 1, 2 ,3, 4 ,5, 6 ,7, 8 ,9 ,10, 11, 12, 13, 14, 15, 16, 17 ,1
 75, 76, 77 ,78, 79, 80, 81, 82, 83, 84 ,85 ,86, 87, 88 ,89, 90, 91 ,92 ,93 ,94, 95, 96, 97, 98 ,99]
 
 
-given_scalar = float(input("Enter a float value: "))  
+scalar = float(input("Enter a float value: "))  
 
-closest_value = None
+value = None
 min_difference = float('inf')
 
-for value in original_array:
-    difference = abs(value - given_scalar)
+for i in original_array:
+    difference = abs(i - scalar)
     if difference < min_difference:
         min_difference = difference
-        closest_value = value
+        value = i
 
 print("Tableau d'origine :")
 print(original_array)
-print(f"Valeur la plus proche de {given_scalar} : {closest_value}")
+print(f"Valeur la plus proche de {scalar} : {value}")
 
 
 
